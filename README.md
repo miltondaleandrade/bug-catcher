@@ -108,3 +108,20 @@ https://api.airtable.com/v0/AIRTABLE_BASE_ID/bugs?api_key=YOUR_API_KEY
 |Deployment                     |    H     |     2hrs       |               |             |
 | Total                         |          |     42hrs      |     4hrs      |    4hrs     |
 
+## SWOT Analysis
+
+### Strengths:
+
+My comfort with React is low, but I actually really like how it works,  and my ability to understand game logic and break it down into smaller chunks I think will be a huge benifit to accomplishing all of my MVP tasks 
+
+### Weaknesses:
+
+Understanding the way Grid/React will work with the logic of the game could be quiet challending as I've never made a top down game before.
+
+### Opportunities:
+
+Being able to control the database my self takes alot of the stress out of actually building the project, because knowing exactly what to expect doesnt seem as daunting. 
+
+### Threats:
+
+The logic of the game and react is what Im most worried about here, I too often over complicate things and get stuck in ruts that seem to make the challenges harder then they seem to be. This time, focusing on the basics of the APP and getting that tested and working thoroughly before I tackle game parameters will help me stay focused - and lessen the disapointment of not having it perfected will help!
