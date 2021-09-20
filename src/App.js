@@ -1,21 +1,17 @@
-import Logo from "./assets/logo.svg" 
-import Github from "./assets/github.svg"
+import Nav from './components/pageComponents/Nav';
+import Footer from './components/pageComponents/Footer';
+import Header from './components/pageComponents/Header';
+import Bug from './components/Bug';
+import Form from './components/Form';
+import Gameboard from './components/Gameboard';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
-        <nav>
-          <img id="logo" src={Logo} alt="Bug-Catcher Logo" />
-        </nav>
-      </header>
-      <main></main>
-      <footer>
-        &copy; Ben Lowry 2021
-        <img id="github" src={Github} alt="Github logo" />
-      </footer>
+      <Header>
+        <Nav />
+      </Header>
     </div>
   );
 }
