@@ -2,7 +2,7 @@
 
 ## Project Name
 
-Bug-Catcher
+![Bug-Catcher Logo](https://i.imgur.com/qykm16l.png)
 
 ## Project Description
 
