@@ -21,7 +21,7 @@ Bug-Catcher is an interactive learning experience that teaches you about bugs fo
 
 ## Component Hierarchy
 
-
+![Bug-Catcher App Component Hierarchy] (https://i.imgur.com/TBmKxhE.png)
 
 ## API and Data Sample
 
