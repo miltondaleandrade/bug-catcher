@@ -13,7 +13,11 @@ Bug-Catcher is an interactive learning experience that teaches you about bugs fo
 
 
 
-#### Main game board
+#### Desktop Page
+![Bug-Catcher Main Page] (https://i.imgur.com/WgEPBv6.png)
+
+#### Mobile Page
+![Bug-Catcher Mobile Page] (https://i.imgur.com/0G40Ohg.png)
 
 ## Component Hierarchy
 
@@ -47,13 +51,13 @@ https://api.airtable.com/v0/AIRTABLE_BASE_ID/bugs?api_key=YOUR_API_KEY
 
 #### MVP
 
-- design and create entire structure of app via react(and react router)
+- design and create entire structure of app via react and react router
 - Create an Airtable that will handle GET, and POST along with PUT data 
 - Render the game board randomly with bugs
 - Create a form for users to add more bugs
 - Style components using CSS create layout with grid and flexbox
 - Make site responsive on at least two screen sizes
-- Deploy site and use environment variables to hide API keys
+- Deploy site and use .env to hide API keys
 
 #### Post MVP
 
