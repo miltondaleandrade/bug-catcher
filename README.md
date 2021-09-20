@@ -14,14 +14,14 @@ Bug-Catcher is an interactive learning experience that teaches you about bugs fo
 
 
 #### Desktop Page
-![Bug-Catcher Main Page] (https://i.imgur.com/WgEPBv6.png)
+![Bug-Catcher Main Page](https://i.imgur.com/WgEPBv6.png)
 
 #### Mobile Page
-![Bug-Catcher Mobile Page] (https://i.imgur.com/0G40Ohg.png)
+![Bug-Catcher Mobile Page](https://i.imgur.com/0G40Ohg.png)
 
 ## Component Hierarchy
 
-![Bug-Catcher App Component Hierarchy] (https://i.imgur.com/TBmKxhE.png)
+![Bug-Catcher App Component Hierarchy](https://i.imgur.com/TBmKxhE.png)
 
 ## API and Data Sample
 
