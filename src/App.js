@@ -4,6 +4,7 @@ import Bug from './components/Bug';
 import Form from './components/Form';
 import Gameboard from './components/Gameboard';
 import './App.css';
+import { Route } from 'react-router';
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
       <main>
         <Gameboard />
       </main>
+      <Route>
       <Footer />
+      </Route>
     </div>
   );
 }
