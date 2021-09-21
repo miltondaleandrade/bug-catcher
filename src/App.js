@@ -2,6 +2,7 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Bug from './components/Bug';
 import Form from './components/Form';
+import './sass/input.scss';
 import Gameboard from './components/Gameboard';
 import './App.css';
 import axios from 'axios';
