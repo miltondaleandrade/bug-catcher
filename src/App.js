@@ -5,7 +5,7 @@ import Form from './components/Form';
 import Gameboard from './components/Gameboard';
 import './App.css';
 import axios from 'axios';
-import { Route } from 'react-router';
+import { Route, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { baseURL, config } from './services';
 
@@ -19,6 +19,7 @@ function App() {
       console.log(response.data.records);
     }
     getBugs();
+    console.log(bugs)
   }, [])
   return (
     <div className="App">
@@ -30,9 +31,10 @@ function App() {
         <Gameboard />
       </main>
       </Route>
-      <Route path="/bugs:id">
+      <Route path="/bugs">
         {bugs.map((bug) => (
           <Bug key={bug.id} bug={bug}/>
+          
         ))}
       </Route>
       <Route>
