@@ -4,17 +4,37 @@ import Bug from './components/Bug';
 import Form from './components/Form';
 import Gameboard from './components/Gameboard';
 import './App.css';
+import axios from 'axios';
 import { Route } from 'react-router';
+import { useEffect, useState } from 'react';
+import { baseURL, config } from './services';
 
 function App() {
+  const [bugs, setBugs] = useState([]);
+
+  useEffect(() => {
+    const getBugs = async () => {
+      const response = await axios.get(baseURL, config);
+      setBugs(response.data.records)
+      console.log(response.data.records);
+    }
+    getBugs();
+  }, [])
   return (
     <div className="App">
       <header className="App-header">
       <Nav />
       </header>
+      <Route exact path="/">
       <main>
         <Gameboard />
       </main>
+      </Route>
+      <Route path="/bugs:id">
+        {bugs.map((bug) => (
+          <Bug key={bug.id} bug={bug}/>
+        ))}
+      </Route>
       <Route>
       <Footer />
       </Route>
