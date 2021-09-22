@@ -1,25 +1,37 @@
 import { useEffect, useState } from "react";
-import Grid from "react-css-grid";
+import Tile from './Tile';
 
 export default function Gameboard(props) {
-  // const [player, setPlayer] = useState("");
-  // const [board, setBoard] = useState({});
-  // const [tiles, setTiles] = useState([]);
-  // const [bugImg, setBugImg] = useState([]);
-  const tiles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
-//   const createBoard = () => {
-//     for (let counter = 16; counter > 0; counter--) {
-//       tiles.push(counter);
-//       console.log(tiles);
-//     }
-//     createBoard(tiles);
-//   };
+    const [keyPress, setKeyPress] = useState(false);
 
+  
+  useEffect(()=>{
+  const createBoard = () => {
+    let arr = [];
+    let key = 0;
+    for (let i = 0; i < 4; i++) {
+      for (let j = 0; j < 4; j++) {
+        arr.push(
+          <Tile
+            x={j}
+            y={i}
+            key={key++}
+            tile={8[Math.floor(Math.random() * 16)]}
+            selectedTile={props.selectedTile}
+          />
+        );
+      }
+    }
+    return arr;
+  }
+  createBoard();
+}, [keyPress])
+
+//   };
+console.log(props.bugs.fields)
   return (
-    <div className="grid-board">
-      {tiles.map((tile) => (
-        <div className="grid-inner">{tile}</div>
-      ))}
+    <div className="grid-board" onKeyDown={() => (props.move)}>
+      <Tile setKeyPress={setKeyPress}/>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Bug from './components/Bug';
+import Tile from './components/Tile';
 import Form from './components/Form';
 import './sass/input.scss';
 import Gameboard from './components/Gameboard';
@@ -29,7 +30,7 @@ function App() {
       </header>
       <Route exact path="/">
       <main>
-        <Gameboard />
+        <Gameboard bugs={bugs}/>
       </main>
       </Route>
       <Route path="/bugs">

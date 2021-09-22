@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import Github from '../assets/github.svg';
 import { gitHub } from '../services';
 export default function Footer() {
