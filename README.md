@@ -64,7 +64,7 @@ https://api.airtable.com/v0/AIRTABLE_BASE_ID/bugs?api_key=YOUR_API_KEY
 #### MVP
 
 - design and create entire structure of app via react and react router
-- Create an Airtable that will handle GET, and POST along with PUT data 
+- Create an Airtable that will handle GET, and POST data 
 - Render the game board randomly with bugs
 - Create a form for users to add more bugs
 - Style components using CSS create layout with grid and flexbox
@@ -81,9 +81,9 @@ https://api.airtable.com/v0/AIRTABLE_BASE_ID/bugs?api_key=YOUR_API_KEY
 | Day        | Deliverable                                   | Status   |
 | ---------- | --------------------------------------------- | -------- |
 | Sept 20    | Readme / Wireframes / Timeframe               | Complete |
-| Sept 20    | Approval                                      |incomplete|
-| Sept 21    | App Sctructure(React, Scss, Javascript)       |incomplete|
-| Sept 22    | Axios / Form / Game Logic / Render            |incomplete|
+| Sept 20    | Approval                                      | Complete |
+| Sept 21    | App Sctructure(React, Scss, Javascript)       | Complete |
+| Sept 22    | Axios / Form / Game Logic / Render            | Complete |
 | Sept 23    | MVP Deployment                                |incomplete|
 | Sept 24    | post-MVP/ Game Logic                          |incomplete|
 | Sept 27    | Presentation                                  |incomplete|      
