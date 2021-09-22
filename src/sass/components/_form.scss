@@ -1,0 +1,27 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form>input {
+    margin: 5px;
+    padding: 5px;
+    width: 240px;
+    background-color: $opacity-colors;
+    @include borders;
+    
+}
+.form>textarea {
+    background-color: $opacity-colors;
+    @include borders;
+}
+
+.form>button {
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    background-color: $opacity-colors;
+    @include borders;
+}

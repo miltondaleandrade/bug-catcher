@@ -6,6 +6,7 @@ export default function Nav() {
         <nav className="main-nav">
             <Link to="/"><img id="logo" src={Logo} alt="Bug-Catcher Logo" /></Link>
             <Link to="/bugs">Bugs</Link>
+            <Link to="/new-bug">Create a New Bug</Link>
         </nav>
     )
 }

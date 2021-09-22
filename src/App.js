@@ -1,15 +1,15 @@
-import Nav from './components/Nav';
-import Footer from './components/Footer';
-import Bug from './components/Bug';
-import Tile from './components/Tile';
-import Form from './components/Form';
-import './sass/input.scss';
-import Gameboard from './components/Gameboard';
-import './App.css';
-import axios from 'axios';
-import { Route, Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { baseURL, config } from './services';
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import Bug from "./components/Bug";
+import Tile from "./components/Tile";
+import Form from "./components/Form";
+import "./sass/input.scss";
+import Gameboard from "./components/Gameboard";
+import "./App.css";
+import axios from "axios";
+import { Route, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { baseURL, config } from "./services";
 
 function App() {
   const [bugs, setBugs] = useState([]);
@@ -17,30 +17,32 @@ function App() {
   useEffect(() => {
     const getBugs = async () => {
       const response = await axios.get(baseURL, config);
-      setBugs(response.data.records)
+      setBugs(response.data.records);
       console.log(response.data.records);
-    }
+    };
     getBugs();
-    console.log(bugs)
-  }, [])
+    console.log(bugs);
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
-      <Nav />
+        <Nav />
       </header>
       <Route exact path="/">
-      <main>
-        <Gameboard bugs={bugs}/>
-      </main>
+        <main>
+          <Gameboard bugs={bugs} />
+        </main>
       </Route>
       <Route path="/bugs">
         {bugs.map((bug) => (
-          <Bug key={bug.id} bug={bug}/>
-          
+          <Bug key={bug.id} bug={bug} />
         ))}
       </Route>
+      <Route path="/new-bug">
+        <Form />
+      </Route>
       <Route>
-      <Footer />
+        <Footer />
       </Route>
     </div>
   );
