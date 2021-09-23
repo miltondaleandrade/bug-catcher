@@ -3,9 +3,7 @@ nav {
     background-color: $primary-color;
     
 }
-#logo {
-    // width: 150px;
-}
+
 
 #new-bug, #bugs, #bug {
     @include links;

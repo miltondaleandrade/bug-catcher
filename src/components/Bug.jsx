@@ -1,8 +1,8 @@
-import { useParams } from "react-router-dom";
+
 
 export default function Bug(props) {
     // const params = useParams(props);
-    const { bug, species, imageURL, imageReference, information, schmidtPainIndex, schmidtPainIndexFull, fieldReference } = props.bug.fields;
+    const { bug, species, imageURL, imageReference, information, schmidtPainIndex, fieldReference } = props.bug.fields;
     // const bug = props.bugs.find((bug) => (bug.id === params.id));
 
 

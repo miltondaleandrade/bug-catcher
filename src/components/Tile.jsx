@@ -1,8 +1,4 @@
 export default function Tile(props) {
-  //if found tile contents not null
-  //redirect use to bug modal with matching id use bug id interpolated
-  //if()
-
   return (
     <>
       {props.tiles.map((tile, i) => (
@@ -17,7 +13,3 @@ export default function Tile(props) {
     </>
   );
 }
-
-//get bugs
-//populate game board
-//

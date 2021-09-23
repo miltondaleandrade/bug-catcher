@@ -22,7 +22,6 @@ function App() {
   useEffect(() => {
     const move = (dir, change) => {
       setSelectedTile((coords) => {
-        console.log(coords);
         if (coords[dir] + change > -1 && coords[dir] + change < 4) {
           coords[dir] += change;
         }
@@ -85,7 +84,6 @@ function App() {
     const getBugs = async () => {
       const response = await axios.get(baseURL, config);
       setBugs(response.data.records);
-      console.log(response.data.records);
     };
     getBugs();
   }, [toggleFetch]);
