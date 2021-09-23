@@ -7,7 +7,7 @@ export default function Nav() {
             <Link id="logo" to="/"><img id="logo" src={Logo} alt="Bug-Catcher Logo" /></Link>
             <Link id="bugs" to="/bugs">Bugs</Link>
             <Link id="new-bug" to="/new-bug">Create a New Bug</Link>
-            <Link id="bug" to="/bug">Bug Modal</Link>
+            <Link id="bug" to="/bug/:id">Bug Modal</Link>
         </nav>
     )
 }

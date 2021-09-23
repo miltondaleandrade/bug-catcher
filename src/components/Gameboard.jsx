@@ -4,7 +4,7 @@ export default function Gameboard(props) {
   
   return (
     <div className={"grid-board"}>
-        <Tile />
+        <Tile {...props} />
     </div>
   );
 }
