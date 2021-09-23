@@ -108,7 +108,6 @@ function App() {
         <Route path="/bug/:id">
           <BugModal bugs={bugs} setToggleFetch={setToggleFetch} />
         </Route>
-
       </main>
       <Footer />
     </div>

@@ -1,17 +1,17 @@
 .grid-board {
-    margin-top: 50px;
-    display: grid;
-    justify-content: center;
-    @include grid-size-small;
+  margin-top: 50px;
+  display: grid;
+  justify-content: center;
+  @include grid-size-small;
 }
 
 @media (min-width: 375px) {
-    .grid-board {
-        @include grid-size-medium;
-    }
+  .grid-board {
+    @include grid-size-medium;
+  }
 }
 @media (min-width: 525px) {
-    .grid-board {
-        @include grid-size-large;
-    }
+  .grid-board {
+    @include grid-size-large;
+  }
 }
