@@ -1,18 +1,19 @@
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Bug from "./components/Bug";
-import Tile from "./components/Tile";
 import Form from "./components/Form";
 import "./sass/input.scss";
 import Gameboard from "./components/Gameboard";
 import "./App.css";
 import axios from "axios";
-import { Route, Link } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { baseURL, config } from "./services";
+import BugModal from "./components/BugModal";
 
 function App() {
   const [bugs, setBugs] = useState([]);
+  const [toggleFetch, setToggleFetch] = useState(false);
 
   useEffect(() => {
     const getBugs = async () => {
@@ -22,7 +23,7 @@ function App() {
     };
     getBugs();
     console.log(bugs);
-  }, []);
+  }, [toggleFetch]);
   return (
     <div className="App">
       <header className="App-header">
@@ -40,6 +41,12 @@ function App() {
       </Route>
       <Route path="/new-bug">
         <Form />
+      </Route>
+      <Route path="/bug:id">
+        {bugs.map((bug) => (
+          <BugModal bug={bug} setToggleFetch={setToggleFetch}/>
+        ))}
+        
       </Route>
       <Route>
         <Footer />

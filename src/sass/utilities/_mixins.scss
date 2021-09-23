@@ -5,3 +5,11 @@
     border-radius: 5px;
     border: 1px solid lightgray;
 }
+
+@mixin links {
+    text-decoration: none;
+    color: $base-txt-color;
+    &:hover {
+        color: $opacity-colors;
+    }
+}

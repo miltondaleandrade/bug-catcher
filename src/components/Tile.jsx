@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { createEmptyBoard } from "../services";
+import Bug from '../components/Bug';
 export default function Tile(props) {
   const [tiles, setTiles] = useState(createEmptyBoard());
   const [selectedTile, setSelectedTile] = useState([0, 0]);
@@ -18,19 +19,19 @@ export default function Tile(props) {
       e.preventDefault();
       switch (e.keyCode) {
           // left
-        case 37:
+        case 65:
           move(0, -1);
           break;
           // up
-        case 38:
+        case 87:
           move(1, -1);
           break;
           // right
-        case 39:
+        case 68:
           move(0, 1);
           break;
           // down
-        case 40:
+        case 83:
           move(1, 1);
           break;
         default:
@@ -47,10 +48,10 @@ export default function Tile(props) {
     <>
       {tiles.map((tile, i) => (
         <div
-          className={`grid-inner ${selectedTile[0] === tile.x && selectedTile[1] === tile.y && "selected"} ${i % 2 ? "light-green" : "green"}`
+          className={`grid-inner ${selectedTile[0] === tile.x && selectedTile[1] === tile.y && "selected"} ${i % 2 ? "light-green" : "green"} ${selectedTile}`
           }
         >
-          {tile.contents}
+          {/* {players position === className="selected" ? display bug modal : null} */}
         </div>
       ))}
     </>
