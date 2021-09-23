@@ -1,13 +1,12 @@
 .bug-modal {
-display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 70px;
-  width: 100vw;
-  text-align: center;
+  justify-content: center;
+    align-content: center;
 }
 .modal-content {
     background-color: $opacity-colors;
-    color: $secondary-txt-color;
+    @include bug;
+}
+
+.modal-content>p {
+  line-height: 2em;
 }

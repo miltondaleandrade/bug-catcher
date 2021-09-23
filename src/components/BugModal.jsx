@@ -15,8 +15,7 @@ export default function BugModal(props) {
         <h3>
           Species: <i>{bug.fields.species}</i>
         </h3>
-        <h3>Pain Index: {bug.fields.schmidtPainIndex}</h3>
-        <p>Pain Index Info: {bug.fields.schmidtPainIndexFull}</p>
+        {(bug.fields.schmidtPainIndex != null) ?<h3>"Pain Index:" {bug.fields.schmidtPainIndex}</h3> : <h3>{null}</h3>}
         <p>Field Guide Information: {bug.fields.information}</p>
         <button
           onClick={() => window.open(`${bug.fields.fieldReference}`, "_blank")}

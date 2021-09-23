@@ -10,13 +10,13 @@ export default function Bug(props) {
   } = props.bug.fields;
 
   return (
-    <div>
+    <div className="bug">
       <img src={imageURL} alt={imageReference} />
       <h2>Name: {bug}</h2>
       <h3>
         Species: <i>{species}</i>
       </h3>
-      <h3>Pain Index: {schmidtPainIndex}</h3>
+      {schmidtPainIndex != null ? <h3>Pain Index: {schmidtPainIndex}</h3> : null}
       <p>Field Guide Information: {information}</p>
       <button onClick={() => window.open(`${fieldReference}`, "_blank")}>
         More Information

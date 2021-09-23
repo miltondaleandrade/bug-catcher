@@ -1,8 +1,9 @@
 .grid-board {
   margin-top: 50px;
+  margin-bottom: 50px;
   display: grid;
   justify-content: center;
-  @include grid-size-small;
+  @include grid-size-xsmall;
 }
 
 @media (min-width: 375px) {

@@ -13,9 +13,6 @@ export default function Nav() {
       <Link id="new-bug" to="/new-bug">
         Create a New Bug
       </Link>
-      <Link id="bug" to="/bug/:id">
-        Bug Modal
-      </Link>
     </nav>
   );
 }
