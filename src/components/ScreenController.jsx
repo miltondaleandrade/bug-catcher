@@ -4,11 +4,14 @@ export default function ScreenController() {
         preventDefault: () => console.log("no") }
     
     return (
-        <div id="controller">
-        <div id="up" onClick={(e)=> onkeypress(fakeEvent)}></div>
-        <div id="right"></div>
-        <div id="left"></div>
-        <div id="down"></div>        
+        <>
+        <h3 id="controller-title">Controller</h3>
+        <div id="controller">        
+        <div id="up" onClick={(e)=> onkeypress(fakeEvent)}>up</div>
+        <div id="right">right</div>
+        <div id="left">left</div>
+        <div id="down">down</div>        
         </div>
+        </>
     )
 }
