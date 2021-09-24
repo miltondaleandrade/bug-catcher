@@ -3,8 +3,8 @@
   padding: 15px;
   justify-self: center;
   align-self: center;
-  max-width: 700px;
-  @include bug;
+  max-width: 1000px;
+  @include bug-flex;
 }
 .modal-content>img {
   max-width: 400px;
@@ -30,7 +30,7 @@
  .modal-content {
   display: grid;
   grid-template-columns: repeat(4);
-  grid-template-rows: repeat(8,);
+  grid-template-rows: repeat(8);
 }
 .modal-content>img {
 grid-column: 1 / 3;

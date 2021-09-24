@@ -33,9 +33,10 @@
   grid-template-rows: repeat(4, 100px);
 }
 
-@mixin bug {
+@mixin bug-flex {
   margin: 0 auto;
-  width: 300px;
+  min-width: 300px;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,12 +53,20 @@
     margin: 5px;
   }
 }
+@mixin bug-grid {
+  display: grid;
+  grid-template-columns: repeat(4);
+  grid-template-rows: repeat(8);
+
+  
+}
 @mixin bug-text-field {
   line-height: 1.5em;
   max-width: 400px;
   height: 100px;
+  justify-self: center;
+  align-self: center;
   overflow-y: scroll;
-  padding-right: 17px;
 }
 
 @mixin bug-button {
@@ -68,4 +77,25 @@
   background-color: $opacity-colors;
   @include borders;
   align-self: center;
+}
+
+@mixin arrow-img {
+  background-image: url("../../assets/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30px;
+  background-size: 20px 30px;
+}
+
+@mixin up-arrow {
+  transform: rotate(310deg);
+}
+@mixin right-arrow {
+  transform: rotate(40deg);
+}
+@mixin down-arrow {
+  transform: rotate(130deg);
+}
+@mixin left-arrow {
+  transform: rotate(220deg);
 }

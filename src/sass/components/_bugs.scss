@@ -1,5 +1,5 @@
 .bug {
-    @include bug;
+    @include bug-flex;
     
 }
 
@@ -10,3 +10,7 @@
 .bug>button {
     @include bug-button;
 }
+
+@media (min-width: 722px) {
+    
+} 

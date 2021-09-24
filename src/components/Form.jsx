@@ -30,8 +30,8 @@ export default function Form() {
 
   return (
     <div>
-    {/* <h3>Create a bug!</h3>
-    <p>Please include an Image and Image reference!</p> */}
+    <h3>Create a bug!</h3>
+    <p>Please include an Image and Image reference!</p>
     <form className="form" onSubmit={handleSubmit}>
       <input
         type="text"

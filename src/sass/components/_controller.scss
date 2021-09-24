@@ -1,47 +1,79 @@
 #controller-title {
-    margin-top: 10px;
-    margin-bottom: 40px;
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 #controller {
-    align-self: center;
-    margin-bottom: 50px;
-    height: 70px;
-    width: 70px;    
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
-    row-gap: 4px;
-    column-gap: 4px;
-    transform: rotate(50deg);
+  align-self: center;
+  margin-bottom: 50px;
+  height: 70px;
+  width: 70px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 4px;
+  column-gap: 4px;
+  transform: rotate(50deg);
+}
+.up-arrow {
+  @include arrow-img;
+  @include up-arrow;
+}
+.right-arrow {
+  @include arrow-img;
+  @include right-arrow;
+}
+.down-arrow {
+  @include arrow-img;
+  @include down-arrow;
+}
+.left-arrow {
+  @include arrow-img;
+  @include left-arrow;
 }
 #up,
 #down,
 #left,
 #right {
-    background-color: $opacity-colors;
+  background-color: $opacity-colors;
 }
 #up:hover {
-    border-top: $opacity-border;
-    border-left: $opacity-border;
+  border-top: $opacity-border;
+  border-left: $opacity-border;
 }
-#down:hover{
-    border-right: $opacity-border;
-    border-bottom: $opacity-border;
+#down:hover {
+  border-right: $opacity-border;
+  border-bottom: $opacity-border;
 }
-#left:hover{
-    border-bottom: $opacity-border;
-    border-left: $opacity-border;
+#left:hover {
+  border-bottom: $opacity-border;
+  border-left: $opacity-border;
 }
 #right:hover {
-    border-top: $opacity-border;
-    border-right: $opacity-border;
+  border-top: $opacity-border;
+  border-right: $opacity-border;
 }
 
 @media (min-width: 425px) {
-    #controller {
-        height: 200px;
-        width: 200px;
-        margin-left: -20px;
-    }
+  #controller {
+    height: 200px;
+    width: 200px;
+    margin-left: -20px;
+  }
+  .up-arrow,
+  .right-arrow,
+  .down-arrow,
+  .left-arrow {
+    height: 80px;
+    width: 80px;
+    background-size: 60px 70px;
+  }
+  .up-arrow {
+      
+  }
+  .right-arrow{
+  }
+  .down-arrow{
+      
+  }
+  .left-arrow{}
 }
-
