@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useState } from "react";
 import { baseURL, config } from "../services";
+import { useHistory } from "react-router-dom";
 
-export default function Form(props) {
+export default function Form() {
   const [bug, setBug] = useState("");
   const [species, setSpecies] = useState("");
   const [schmidtPainIndex, setSchmidtPainIndex] = useState(0);
@@ -10,7 +11,7 @@ export default function Form(props) {
   const [information, setInformation] = useState("");
   const [fieldReference, setFieldReference] = useState("");
   const [imageReference, setImageReference] = useState("");
-
+  const history = useHistory();
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newBug = {
@@ -24,12 +25,13 @@ export default function Form(props) {
     };
 
     await axios.post(baseURL, { fields: newBug }, config);
+    history.push("/");
   };
 
   return (
-    <>
-    <h3>Create a bug!</h3>
-    <p>Please include an Image and Image reference!</p>
+    <div>
+    {/* <h3>Create a bug!</h3>
+    <p>Please include an Image and Image reference!</p> */}
     <form className="form" onSubmit={handleSubmit}>
       <input
         type="text"
@@ -46,7 +48,7 @@ export default function Form(props) {
         onChange={(e) => setSpecies(e.target.value)}
       />
       <input
-        type="text"
+        type="number"
         placeholder="Schmidt Index"
         value={schmidtPainIndex}
         onChange={(e) => setSchmidtPainIndex(e.target.valueAsNumber)}
@@ -81,6 +83,6 @@ export default function Form(props) {
       ></input>
       <button type="submit">Create!</button>
     </form>
-    </>
+    </div>
   );
 }

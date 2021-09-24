@@ -1,22 +1,16 @@
 * {
-    padding: 0;
-    margin: 0;
-    
-
+  padding: 0;
+  margin: 0;
 }
-
 
 main {
-    display: flex;
-    flex-direction: column;  
-    min-height: 100vh;
-    background-color: $opacity-colors; 
-    font-family: $primary-txt-font;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $opacity-colors;
+  font-family: $primary-txt-font;
 }
 
-footer {    
-    background-color: $secondary-color;
+footer {
+  background-color: $secondary-color;
 }
-
-
-

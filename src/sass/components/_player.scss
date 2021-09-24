@@ -16,3 +16,14 @@
 .green {
   background-color: green;
 }
+
+@media (min-width: 375px) {
+  .selected{
+    background-size: 40px 45px;
+  }
+}
+@media (min-width: 525px) {
+  .selected {
+    background-size: 70px 75px;
+  }
+}

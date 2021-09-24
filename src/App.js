@@ -35,8 +35,11 @@ function App() {
     });
   }, [])
   const keyPress = useCallback( (e) => {
-    e.preventDefault();
-    if(location.pathname !== "/") return; 
+    
+    if(location.pathname !== "/"){
+       return;
+      }else {
+        e.preventDefault(); 
     switch (e.keyCode) {
       // left
       case 65:
@@ -56,6 +59,7 @@ function App() {
         break;
       default:
         break;
+    }
     }
   }, [location.pathname, move])
   useEffect(() => {
