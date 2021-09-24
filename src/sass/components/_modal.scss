@@ -3,10 +3,11 @@
     align-content: center;
 }
 .modal-content {
-    background-color: $opacity-colors;
     @include bug;
 }
 
 .modal-content>p {
   line-height: 2em;
+  font-size: 10px;
+
 }
