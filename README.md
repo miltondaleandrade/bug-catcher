@@ -127,7 +127,7 @@ Being able to control the database my self takes alot of the stress out of actua
 The logic of the game and react is what Im most worried about here, I too often over complicate things and get stuck in ruts that seem to make the challenges harder then they seem to be. This time, focusing on the basics of the APP and getting that tested and working thoroughly before I tackle game parameters will help me stay focused - and lessen the disapointment of not having it perfected will help!
 
 ### Citations
-[React Game Kit](https://github.com/FormidableLabs/react-game-kit)
-[Wanderer](https://github.com/ddbrennan/wander)
-[Boardgame logic in React](https://medium.com/@tylercmasterson/board-game-logic-in-react-199d6983fc23)
-[Hash Tables](https://www.youtube.com/watch?v=S5NY1fqisSY)
+  - [React Game Kit](https://github.com/FormidableLabs/react-game-kit)
+  - [Wanderer](https://github.com/ddbrennan/wander)
+  - [Boardgame logic in React](https://medium.com/@tylercmasterson/board-game-logic-in-react-199d6983fc23)
+  - [Hash Tables](https://www.youtube.com/watch?v=S5NY1fqisSY)
