@@ -11,15 +11,12 @@ main {
     flex-direction: column;  
     min-height: 100vh;
     background-color: $opacity-colors; 
+    font-family: $primary-txt-font;
 }
 
 footer {    
     background-color: $secondary-color;
 }
 
-@media (min-width: 425px) {
-    footer {
-        
-    }
-}
+
 

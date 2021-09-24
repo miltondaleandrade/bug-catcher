@@ -66,7 +66,6 @@ function App() {
   }, [keyPress, move, setSelectedTile]);
   useEffect(() => {
     const newTiles = createEmptyBoard();
-    //for each bug
     bugs.forEach((bug) => {
       let randoTile = newTiles[Math.floor(Math.random() * newTiles.length)];
       while (

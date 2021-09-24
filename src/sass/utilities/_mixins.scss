@@ -20,7 +20,7 @@
   grid-template-rows: repeat(4, 30px);
 }
 @mixin grid-size-small {
-    grid-template-columns: repeat(4, 50px);
+  grid-template-columns: repeat(4, 50px);
   grid-template-rows: repeat(4, 50px);
 }
 @mixin grid-size-medium {
@@ -34,31 +34,35 @@
 }
 
 @mixin bug {
-        margin: 0 auto;
-        width: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: space-between;
-        line-height: 2em;
-        
-    &button {
-        width: 150px;
-        border: none;
-        border-radius: 5px;
-        background-color: $primary-color;
-    }
-    &img {
-        width: 150px;
-        margin: 0 auto;
-        box-sizing: border-box;
-        padding: 10px;
-    }
-    &h3,
-    &h2 {
-        margin: 5px;
-    }
-    
+  margin: 0 auto;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+
+  &img {
+    width: 150px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  &h3,
+  &h2 {
+    margin: 5px;
+  }
+}
+@mixin bug-text-field {
+  line-height: 1.5em;
+  height: 100px;
+  overflow: scroll;
 }
 
-
+@mixin bug-button {
+  padding: 5px;
+  margin: 5px;
+  min-width: 150px;
+  font-size: 20px;
+  background-color: $opacity-colors;
+  @include borders;
+}

@@ -1,13 +1,45 @@
-.bug-modal {
-  justify-content: center;
-    align-content: center;
-}
+
 .modal-content {
-    @include bug;
+  justify-self: center;
+  align-self: center;
+  @include bug;
+}
+.modal-content>img {
+  max-width: 400px;
+}
+.modal-content>p {
+  @include bug-text-field;
 }
 
-.modal-content>p {
-  line-height: 2em;
-  font-size: 10px;
+.modal-content>button {
+  @include bug-button;
 
+}
+
+@media (min-width: 732px) {
+ .modal-content {
+  display: grid;
+  grid-template-columns: repeat(4);
+  grid-template-rows: repeat(8,);
+}
+.modal-content>img {
+grid-column: 1 / 3;
+grid-row: 1 / 5;
+}
+.modal-content>h3,
+.modal-content>h2 {
+  grid-column: 3 / 5;
+}
+.modal-content>p {
+  grid-column: 1/5;
+  grid-row: 5/7;
+}
+.modal-btn-1 {
+  grid-column: 1/3;
+  grid-row: 7/9;
+}
+.modal-btn-2 {
+  grid-column: 3 / 5;
+  grid-row: 7 / 9;
+}
 }

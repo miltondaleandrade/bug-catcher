@@ -18,9 +18,5 @@
 }
 
 .form > button {
-  padding: 5px;
-  margin: 5px;
-  font-size: 20px;
-  background-color: $opacity-colors;
-  @include borders;
+  @include bug-button;
 }
