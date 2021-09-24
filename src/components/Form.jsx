@@ -27,6 +27,9 @@ export default function Form(props) {
   };
 
   return (
+    <>
+    <h3>Create a bug!</h3>
+    <p>Please include an Image and Image reference!</p>
     <form className="form" onSubmit={handleSubmit}>
       <input
         type="text"
@@ -43,15 +46,14 @@ export default function Form(props) {
         onChange={(e) => setSpecies(e.target.value)}
       />
       <input
-        type="number"
+        type="text"
         placeholder="Schmidt Index"
-        required
         value={schmidtPainIndex}
         onChange={(e) => setSchmidtPainIndex(e.target.valueAsNumber)}
       />
       <input
         type="text"
-        placeholder="Image URl"
+        placeholder="Image URL"
         required
         value={imageURL}
         onChange={(e) => setImageUrl(e.target.value)}
@@ -79,5 +81,6 @@ export default function Form(props) {
       ></input>
       <button type="submit">Create!</button>
     </form>
+    </>
   );
 }
