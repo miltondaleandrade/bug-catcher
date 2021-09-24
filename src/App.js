@@ -4,13 +4,13 @@ import Bug from "./components/Bug";
 import Form from "./components/Form";
 import "./sass/input.scss";
 import Gameboard from "./components/Gameboard";
-// import "./App.css";
 import axios from "axios";
 import { useHistory, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { baseURL, config, createEmptyBoard } from "./services";
 
 import BugModal from "./components/BugModal";
+import ScreenController from "./components/ScreenController";
 
 function App() {
   const [bugs, setBugs] = useState([]);
@@ -95,7 +95,9 @@ function App() {
       </header>
       <main>
         <Route exact path="/">
+          
           <Gameboard selectedTile={selectedTile} tiles={tiles} />
+          <ScreenController />
         </Route>
         <Route path="/bugs">
           {bugs.map((bug) => (

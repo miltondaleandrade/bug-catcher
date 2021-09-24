@@ -1,0 +1,13 @@
+#controller {
+    align-self: center;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    height: 70px;
+    width: 70px;
+    background-color: $opacity-colors;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    transform: rotate(50deg);
+}
+

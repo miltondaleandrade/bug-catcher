@@ -8,8 +8,8 @@ export const config = {
 
 export const createEmptyBoard = () => {
   let arr = [];
-  for (let y = 0; y < 8; y++) {
-    for (let x = 0; x < 8; x++) {
+  for (let y = 0; y < 4; y++) {
+    for (let x = 0; x < 4; x++) {
       arr.push(
         {
           x,
