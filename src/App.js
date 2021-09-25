@@ -25,7 +25,7 @@ function App() {
   //not continue while the location is not equal to the root pathname - 
   //we use "useCallBack" to "memorize" the pathlocation, and if that is 
   //anything but the root path, we do not run the switch statement - 
-  //this also stops re-rendering of the modal.  
+  //this also stops re-rendering / re-routing of the modal.  
   const move = useCallback( (dir, change) => {
     setSelectedTile((coords) => {
       if (coords[dir] + change > -1 && coords[dir] + change < 4) {

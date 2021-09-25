@@ -5,8 +5,8 @@
 #controller {
   align-self: center;
   margin-bottom: 50px;
-  height: 70px;
-  width: 70px;
+  height: 90px;
+  width: 90px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -53,7 +53,23 @@
   border-right: $opacity-border;
 }
 
-@media (min-width: 425px) {
+@media (min-width: 375px) {
+  #controller {
+    height: 150px;
+    width: 150px;
+    margin-left: -20px;
+  }
+  .up-arrow,
+  .right-arrow,
+  .down-arrow,
+  .left-arrow {
+    height: 60px;
+    width: 60px;
+    background-size: 40px 50px;
+  }
+}
+
+@media (min-width: 525px) {
   #controller {
     height: 200px;
     width: 200px;
