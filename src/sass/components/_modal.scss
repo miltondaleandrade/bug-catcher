@@ -7,7 +7,8 @@
   @include bug-flex;
 }
 .modal-content>img {
-  max-width: 400px;
+  max-width: 300px;
+  align-self: center;
 }
 .modal-content>p {
   @include bug-text-field;
@@ -24,9 +25,14 @@
   border: none;
   font-size: 16px;
   text-align: right;
+  padding-bottom: 5px;
 }
-
-@media (min-width: 732px) {
+@media (min-width: 325px) {
+  .modal-content {
+    width: 300pxk;
+  }
+}
+@media (min-width: 620px) {
  .modal-content {
   display: grid;
   grid-template-columns: repeat(4);

@@ -1,3 +1,5 @@
+import { useHistory } from "react-router";
+
 export default function Bug(props) {
   const {
     bug,
@@ -8,9 +10,13 @@ export default function Bug(props) {
     schmidtPainIndex,
     fieldReference,
   } = props.bug.fields;
+  const history = useHistory();
 
   return (
     <div className="bug">
+      <button className="close-btn" onClick={() => history.push("/")}>
+        X
+      </button>
       <img src={imageURL} alt={imageReference} />
       <h2>Name: {bug}</h2>
       <h3>
@@ -18,12 +24,14 @@ export default function Bug(props) {
       </h3>
       {schmidtPainIndex != null ? <h3>Pain Index: {schmidtPainIndex}</h3> : null}
       <p>Field Guide Information: {information}</p>
-      <button onClick={() => window.open(`${fieldReference}`, "_blank")}>
-        More Information
-      </button>
-      <button onCLick={() => <div className="bugModal hide"></div>}>
-        Hide
-      </button>
+      <a
+        className="bug-btn"
+        rel="noreferrer"
+        href={fieldReference}
+        target="_blank"
+      >
+        <button>More Information</button>
+      </a>
     </div>
   );
 }
