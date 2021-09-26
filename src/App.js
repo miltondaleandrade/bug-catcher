@@ -22,6 +22,9 @@ function App() {
   const history = useHistory();
   const location = useLocation();
   const [caughtBugs, setCaughtBugs] = useState([]);
+  const gridBoard = document.querySelector(".grid-board");
+  const isNull = (currentTile) => currentTile.contents === null;
+  
 
 
   //because keyPress is dependant on move, and we want the keypress to 
@@ -95,15 +98,21 @@ function App() {
     }
     for(let i = 0; i < caughtBugs.length; i++) {
       if (caughtBugs[i] === currentTile.contents) {  
-      delete currentTile.contents;
+        currentTile.contents = null;
+      } else if (tiles.every(isNull)){
+        history.push("/bugs");
+        //set the className of grid-board to hide 
       }
     }
-    if (tiles.contents === null) {
-      Location.reload();
-    }
+    // if(tiles.every(isNull)){
+    //   history.push("/bugs");
+    // }
+      
     
     
-  }, [history, tiles, selectedTile, caughtBugs, location.reload]);
+    
+    
+  }, [history, tiles, selectedTile, caughtBugs]);
 
   useEffect(() => {
 
@@ -123,8 +132,8 @@ function App() {
       </header>
       <main>
         <Route exact path="/">
-          <Button caughtBugs={caughtBugs}/>        
-          <Gameboard selectedTile={selectedTile} tiles={tiles} />
+          <Button tiles={tiles} caughtBugs={caughtBugs} isNull={isNull}/>        
+          <Gameboard selectedTile={selectedTile} tiles={tiles} isNull={isNull} caughtBugs={caughtBugs}/>
           <ScreenController keyPress={keyPress}/>
         </Route>
         <Route path="/bugs">

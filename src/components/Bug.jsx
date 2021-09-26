@@ -10,7 +10,6 @@ export default function Bug(props) {
     schmidtPainIndex,
     fieldReference,
   } = props.bug.fields;
-  const history = useHistory();
   
 
   return (
