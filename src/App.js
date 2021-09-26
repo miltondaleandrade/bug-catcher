@@ -2,6 +2,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Bug from "./components/Bug";
 import Form from "./components/Form";
+import Button from "./components/Button";
 import "./sass/input.scss";
 import Gameboard from "./components/Gameboard";
 import axios from "axios";
@@ -19,6 +20,7 @@ function App() {
   const [selectedTile, setSelectedTile] = useState([0, 0]);
   const history = useHistory();
   const location = useLocation();
+  const [caughtBugs, setCaughtBugs] = useState([]);
 
 
   //because keyPress is dependant on move, and we want the keypress to 
@@ -86,11 +88,25 @@ function App() {
     const [y, x] = selectedTile;
     const currentTile = tiles.find((tile) => tile.y === y && tile.x === x);
 
-    if (currentTile.contents != null) {
+    if (currentTile.contents != null) {      
+      caughtBugs.push(currentTile.contents);
       history.push(`/bug/${currentTile.contents}`);
     }
-  }, [history, tiles, selectedTile]);
+    for(let i = 0; i < caughtBugs.length; i++) {
+      if (caughtBugs[i] === currentTile.contents) {  
+      delete currentTile.contents;
+      }
+    }
+    if (tiles.contents === null) {
+      Location.reload();
+    }
+    
+    
+  }, [history, tiles, selectedTile, caughtBugs, location.reload]);
 
+  useEffect(() => {
+
+  })
   useEffect(() => {
     const getBugs = async () => {
       const response = await axios.get(baseURL, config);
@@ -102,17 +118,18 @@ function App() {
   return (
     <div id="App">
       <header>
-        <Nav />
+        <Nav caughtBugs={caughtBugs}/>
       </header>
       <main>
         <Route exact path="/">
-          
+          <Button caughtBugs={caughtBugs}/>        
           <Gameboard selectedTile={selectedTile} tiles={tiles} />
           <ScreenController keyPress={keyPress}/>
         </Route>
         <Route path="/bugs">
+          <Button /> 
           {bugs.map((bug) => (
-            <Bug key={bug.id} bug={bug} />
+            <Bug key={bug.id} bug={bug} caughtBugs={caughtBugs} tiles={tiles.contents}/>
           ))}
         </Route>
         <Route path="/new-bug">

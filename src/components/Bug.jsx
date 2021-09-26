@@ -1,4 +1,4 @@
-import { useHistory } from "react-router";
+import { useHistory, useParams } from "react-router";
 
 export default function Bug(props) {
   const {
@@ -11,6 +11,7 @@ export default function Bug(props) {
     fieldReference,
   } = props.bug.fields;
   const history = useHistory();
+  
 
   return (
     <div className="bug">
@@ -22,7 +23,9 @@ export default function Bug(props) {
       <h3>
         Species: <i>{species}</i>
       </h3>
-      {schmidtPainIndex != null ? <h3>Pain Index: {schmidtPainIndex}</h3> : null}
+      {schmidtPainIndex != null ? (
+        <h3>Pain Index: {schmidtPainIndex}</h3>
+      ) : null}
       <p>Field Guide Information: {information}</p>
       <a
         className="bug-btn"

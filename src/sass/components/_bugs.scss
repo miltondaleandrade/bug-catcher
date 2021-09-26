@@ -14,7 +14,8 @@
   @include bug-text-field;
 }
 
-.bug-btn {
+.bug-btn>button,
+.reload-button {
   @include bug-button;
 }
 .close-btn {
@@ -34,6 +35,7 @@
     width: 600px;
     grid-template-columns: repeat(4);
     grid-template-rows: repeat(8);
+    column-gap: 5px;
   }
   .bug > img {
     width: 400px;
@@ -49,7 +51,7 @@
     grid-row: 6/7;
     justify-self: center;
   }
-  .bug-btn-1 {
+  .bug-btn {
     grid-column: 1/5;
     grid-row: 7/9;
   }

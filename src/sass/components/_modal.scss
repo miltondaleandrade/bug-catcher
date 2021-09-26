@@ -8,6 +8,7 @@
 }
 .modal-content>img {
   align-self: center;
+  max-width: 300px;
 }
 .modal-content>p {
   @include bug-text-field;
