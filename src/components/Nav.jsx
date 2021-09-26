@@ -7,7 +7,7 @@ export default function Nav(props) {
       <Link id="logo" to="/">
         <img id="logo" src={Logo} alt="Bug-Catcher Logo" />
       </Link>
-      <Link id="bugs" to="/bugs" className={`${props.caughtBugs.length > 1 ? null : "hide"}`}>
+      <Link id="bugs" to="/bugs">
         Bugs
       </Link>
       <Link id="new-bug" to="/new-bug">

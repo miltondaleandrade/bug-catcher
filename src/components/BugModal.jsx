@@ -9,9 +9,6 @@ export default function BugModal(props) {
   }
   return (
     <div className="modal-content">
-      <button className="close-btn" onClick={() => history.push("/")}>
-        X
-      </button>
       <img src={bug.fields.imageURL} alt={bug.fields.imageReference} />
       <h2>{bug.fields.bug}</h2>
       <h3>

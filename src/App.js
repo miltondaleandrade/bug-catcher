@@ -12,6 +12,7 @@ import { baseURL, config, createEmptyBoard } from "./services";
 
 import BugModal from "./components/BugModal";
 import ScreenController from "./components/ScreenController";
+import CloseButton from "./components/CloseButton";
 
 function App() {
   const [bugs, setBugs] = useState([]);
@@ -127,7 +128,7 @@ function App() {
           <ScreenController keyPress={keyPress}/>
         </Route>
         <Route path="/bugs">
-          <Button /> 
+          <CloseButton />
           {bugs.map((bug) => (
             <Bug key={bug.id} bug={bug} caughtBugs={caughtBugs} tiles={tiles.contents}/>
           ))}
@@ -136,6 +137,7 @@ function App() {
           <Form />
         </Route>
         <Route path="/bug/:id">
+          <CloseButton />
           <BugModal bugs={bugs} setToggleFetch={setToggleFetch} />
         </Route>
       </main>

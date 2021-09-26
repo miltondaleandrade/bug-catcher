@@ -1,7 +1,6 @@
-import { useHistory, useLocation } from "react-router";
+import { useLocation } from "react-router";
 
 export default function StartButton(props) {
-    const history = useHistory();
     const local = useLocation();
     const bugs = props.caughtBugs;
     const handleClick = (e) => {

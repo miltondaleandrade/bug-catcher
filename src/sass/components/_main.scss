@@ -18,3 +18,17 @@ footer {
 .hide {
   display: none;
 }
+
+.close-btn {
+  background: none;
+  border: none;
+  justify-self: right;
+  width: 20px;
+  font-size: 16px;
+  text-align: right;
+}
+@media (min-width: 320px){
+  .close-btn {
+    max-width: 300px;
+  }
+}

@@ -1,4 +1,4 @@
-import { useHistory, useParams } from "react-router";
+import { useHistory } from "react-router";
 
 export default function Bug(props) {
   const {
@@ -15,9 +15,6 @@ export default function Bug(props) {
 
   return (
     <div className="bug">
-      <button className="close-btn" onClick={() => history.push("/")}>
-        X
-      </button>
       <img src={imageURL} alt={imageReference} />
       <h2>Name: {bug}</h2>
       <h3>

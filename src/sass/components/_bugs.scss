@@ -18,12 +18,7 @@
 .reload-button {
   @include bug-button;
 }
-.close-btn {
-  background: none;
-  border: none;
-  font-size: 16px;
-  text-align: right;
-}
+
 @media (min-width: 325px) {
   .bug {
     width: 300px;
