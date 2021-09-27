@@ -84,29 +84,29 @@ https://api.airtable.com/v0/AIRTABLE_BASE_ID/bugs?api_key=YOUR_API_KEY
 | Sept 20    | Approval                                      | Complete |
 | Sept 21    | App Sctructure(React, Scss, Javascript)       | Complete |
 | Sept 22    | Axios / Form / Game Logic / Render            | Complete |
-| Sept 23    | MVP Deployment                                |incomplete|
-| Sept 24    | post-MVP/ Game Logic                          |incomplete|
-| Sept 27    | Presentation                                  |incomplete|      
+| Sept 23    | MVP Deployment                                | Complete |
+| Sept 24    | post-MVP/ Game Logic                          | Partial  |
+| Sept 27    | Presentation                                  | Complete |      
 ## Timeframes
 
 | Component                     | Priority | Estimated Time | Time Invested | Actual Time |
 | ----------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Prep/Plan                     |    H     |     3hrs       |     2hrs      |             |
-| Wireframes/Animation Design   |    H     |     2.5hrs     |     2hrs      |             |
-| React Structure               |    H     |     2.5hrs     |               |             |
-| Page/Gameboard Styling        |    H     |     3hrs       |               |             |
-| Component Styling             |    H     |     3.5hrs     |               |             |
-| Routing                       |    H     |     2.5hrs     |               |             |
-| Airtable                      |    H     |     3hrs       |               |             |
-| Axios Requests                |    H     |     3hrs       |               |             |
-| Media Queries                 |    M     |     2.5hrs     |               |             |  
-| Bug Information screen        |    H     |     3.5hrs     |               |             |
-| Form Setup                    |    M     |     2hrs       |               |             |
-| Form POST                     |    H     |     2.5hrs     |               |             |
-| Debug                         |    M     |     3hrs       |               |             |
-| SCSS animation                |    L     |     3.5hrs     |               |             |
-|Deployment                     |    H     |     2hrs       |               |             |
-| Total                         |          |     42hrs      |     4hrs      |    4hrs     |
+| Prep/Plan                     |    H     |     3hrs       |     2hrs      |    2hrs     |
+| Wireframes/Animation Design   |    H     |     2.5hrs     |     2.5hrs    |    2.5hrs   |
+| React Structure               |    H     |     2.5hrs     |     3hrs      |    3hrs     |
+| Page/Gameboard Styling        |    H     |     3hrs       |     3hrs      |    3hrs     |
+| Component Styling             |    H     |     3.5hrs     |     4hrs      |    4hrs     |
+| Routing                       |    H     |     2.5hrs     |     2.5hrs    |    2.5hrs   |
+| Airtable                      |    H     |     3hrs       |     3hrs      |    3hrs     |
+| Axios Requests                |    H     |     3hrs       |     3hrs      |    3hrs     |
+| Media Queries                 |    M     |     2.5hrs     |     2.5hrs    |    2.5hrs   |  
+| Bug Information screen        |    H     |     3.5hrs     |     3.5hrs    |    3.5hrs   |
+| Form Setup                    |    M     |     2hrs       |     2hrs      |    2hrs     |
+| Form POST                     |    H     |     2.5hrs     |     2.5hrs    |    2.5hrs   |
+| Debug                         |    M     |     3hrs       |     3.5hrs    |    3.5hrs   |
+| SCSS animation                |    L     |     3.5hrs     |     4hrs      |    4hrs     |
+|Deployment                     |    H     |     2hrs       |     1.5hrs    |    1.5hrs   |
+| Total                         |          |     42hrs      |     42hrs     |    42hrs    |
 
 ## SWOT Analysis
 

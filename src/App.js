@@ -39,7 +39,7 @@ function App() {
       setHasWon(true);
     }
   },[caughtBugs.length, history, location.pathname, hasWon])
-
+  
   const move = useCallback((dir, change) => {
     setSelectedTile((coords) => {
       if (coords[dir] + change > -1 && coords[dir] + change < 4) {
@@ -106,7 +106,9 @@ function App() {
     if (currentTile.contents != null) {
       caughtBugs.push(currentTile.contents);
       history.push(`/bug/${currentTile.contents}`);
+      setCaughtBugs();
     }
+    
     for (let i = 0; i < caughtBugs.length; i++) {
       if (caughtBugs[i] === currentTile.contents) {
         currentTile.contents = null;
