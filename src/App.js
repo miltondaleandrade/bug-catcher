@@ -68,7 +68,7 @@ function App() {
         }
       }
     },
-    [location.pathname, move]
+    [location.pathname, move, history, caughtBugs]
   );
   useEffect(() => {
     window.addEventListener("keydown", keyPress);
