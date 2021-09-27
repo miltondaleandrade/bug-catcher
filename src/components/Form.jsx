@@ -30,59 +30,59 @@ export default function Form() {
 
   return (
     <div>
-    <h3>Create a bug!</h3>
-    <p>Please include an Image and Image reference!</p>
-    <form className="form" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Bug Name"
-        required
-        value={bug}
-        onChange={(e) => setBug(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Species"
-        required
-        value={species}
-        onChange={(e) => setSpecies(e.target.value)}
-      />
-      <input
-        type="number"
-        placeholder="Schmidt Index"
-        value={schmidtPainIndex}
-        onChange={(e) => setSchmidtPainIndex(e.target.valueAsNumber)}
-      />
-      <input
-        type="text"
-        placeholder="Image URL"
-        required
-        value={imageURL}
-        onChange={(e) => setImageUrl(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Information"
-        required
-        value={information}
-        onChange={(e) => setInformation(e.target.value)}
-      ></input>
-      <input
-        type="text"
-        placeholder="Info Reference"
-        required
-        value={fieldReference}
-        onChange={(e) => setFieldReference(e.target.value)}
-      ></input>
-      <input
-        type="text"
-        placeholder="Image Reference"
-        required
-        value={imageReference}
-        onChange={(e) => setImageReference(e.target.value)}
-      ></input>
-      <button type="submit">Create!</button>
-    </form>
+      <h3>Create a bug!</h3>
+      <p>Please include an Image and Image reference!</p>
+      <form className="form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Bug Name"
+          required
+          value={bug}
+          onChange={(e) => setBug(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Species"
+          required
+          value={species}
+          onChange={(e) => setSpecies(e.target.value)}
+        />
+        <input
+          type="number"
+          placeholder="Schmidt Index"
+          value={schmidtPainIndex}
+          onChange={(e) => setSchmidtPainIndex(e.target.valueAsNumber)}
+        />
+        <input
+          type="text"
+          placeholder="Image URL"
+          required
+          value={imageURL}
+          onChange={(e) => setImageUrl(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Information"
+          required
+          value={information}
+          onChange={(e) => setInformation(e.target.value)}
+        ></input>
+        <input
+          type="text"
+          placeholder="Info Reference"
+          required
+          value={fieldReference}
+          onChange={(e) => setFieldReference(e.target.value)}
+        ></input>
+        <input
+          type="text"
+          placeholder="Image Reference"
+          required
+          value={imageReference}
+          onChange={(e) => setImageReference(e.target.value)}
+        ></input>
+        <button type="submit">Create!</button>
+      </form>
     </div>
   );
 }

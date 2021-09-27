@@ -1,5 +1,5 @@
 .bug {
-  padding: 15px;
+  padding: 5px;
   justify-self: center;
   align-self: center;
   max-width: 1000px;
@@ -14,18 +14,19 @@
   @include bug-text-field;
 }
 
-.bug-btn>button,
+.bug-btn > button,
 .reload-button {
   @include bug-button;
 }
 
-@media (min-width: 325px) {
+@media (min-width: 320px) {
   .bug {
     width: 300px;
   }
 }
 @media (min-width: 620px) {
   .bug {
+    padding: 15px;
     display: grid;
     width: 600px;
     grid-template-columns: repeat(4);
@@ -49,9 +50,5 @@
   .bug-btn {
     grid-column: 1/5;
     grid-row: 7/9;
-  }
-  .close-btn {
-    grid-column: 4 / 5;
-    grid-row: 1 / 2;
   }
 }

@@ -1,5 +1,3 @@
-import { useHistory } from "react-router";
-
 export default function Bug(props) {
   const {
     bug,
@@ -10,7 +8,6 @@ export default function Bug(props) {
     schmidtPainIndex,
     fieldReference,
   } = props.bug.fields;
-  
 
   return (
     <div className="bug">

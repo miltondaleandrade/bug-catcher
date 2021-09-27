@@ -1,6 +1,5 @@
-import { useParams, useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
 export default function BugModal(props) {
-  const history = useHistory();
   const params = useParams();
   const bug = props.bugs.find((bug) => bug.id === params.id);
 
@@ -28,7 +27,6 @@ export default function BugModal(props) {
       >
         <button>More Information</button>
       </a>
-      
     </div>
   );
 }
