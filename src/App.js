@@ -31,6 +31,8 @@ function App() {
   //anything but the root path, we do not run the switch statement -
   //this also stops re-rendering / re-routing of the modal.
 
+
+
   useEffect(() => {
     if(caughtBugs.length === 5 && location.pathname === "/" && !hasWon){
       history.push("/bugs");
