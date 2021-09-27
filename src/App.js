@@ -22,6 +22,7 @@ function App() {
   const history = useHistory();
   const location = useLocation();
   const [caughtBugs, setCaughtBugs] = useState([]);
+  const [hasWon, setHasWon] = useState(false); 
   const isNull = (currentTile) => currentTile.contents === null;
 
   //because keyPress is dependant on move, and we want the keypress to
@@ -29,6 +30,13 @@ function App() {
   //we use "useCallBack" to "memorize" the pathlocation, and if that is
   //anything but the root path, we do not run the switch statement -
   //this also stops re-rendering / re-routing of the modal.
+
+  useEffect(() => {
+    if(caughtBugs.length === 5 && location.pathname === "/" && !hasWon){
+      history.push("/bugs");
+      setHasWon(true);
+    }
+  },[caughtBugs.length, history, location.pathname, hasWon])
   const move = useCallback((dir, change) => {
     setSelectedTile((coords) => {
       if (coords[dir] + change > -1 && coords[dir] + change < 4) {
@@ -40,9 +48,6 @@ function App() {
   const keyPress = useCallback(
     (e) => {
       if (location.pathname !== "/") {
-        return;
-      }else if(caughtBugs.length === 5 && location.pathname === "/"){
-        history.push("/bugs");
         return;
       } else {
         e.preventDefault();
