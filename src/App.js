@@ -106,7 +106,6 @@ function App() {
     if (currentTile.contents != null) {
       caughtBugs.push(currentTile.contents);
       history.push(`/bug/${currentTile.contents}`);
-      setCaughtBugs();
     }
     
     for (let i = 0; i < caughtBugs.length; i++) {
